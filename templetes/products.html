@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PHPJabbers.com | Free Book Online Store Website Template</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header">
+					<div class="inner">
+
+						<!-- Logo -->
+							<a href="{% url 'index' %}" class="logo">
+									<span class="fa fa-book"></span> <span class="title">Book Online Store Website</span>
+								</a>
+
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="{% url 'index' %}" >Home</a></li>
+
+					<li><a href="{% url 'products' %}" class="active">Products</a></li>
+
+					<li><a href="{% url 'checkout' %}">Checkout</a></li>
+
+					<li>
+						<a href="#" class="dropdown-toggle">About</a>
+
+						<ul>
+							<li><a href="{% url 'about' %}">About Us</a></li>
+							<li><a href="{% url 'blog' %}">Blog</a></li>
+							<li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+							<li><a href="{% url 'terms' %}">Terms</a></li>
+						</ul>
+					</li>
+
+					<li><a href="{% url 'contact' %}">Contact Us</a></li>
+				</ul>
+			</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Products</h1>
+
+							<div class="image main">
+								<img src="static/images/banner-image-6-1920x500.jpg" class="img-fluid" alt="" />
+							</div>
+							
+							<!-- Products -->
+							<section class="tiles">
+								{% for i in pro %}
+								<article class="style1">
+									<span class="image">
+										<img src="static/images/product-1-720x480.jpg" alt="" />
+									</span>
+									<a href="product-details.html">
+										<h2>{{i.title}}</h2>
+										
+										<p><del>{{i.price}}</del> <strong>{{i.price}}</strong></p>
+
+										<p>{{i.author}} </p>
+									</a>
+								</article>
+								{% endfor %}
+								
+							</section>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+
+								&nbsp;
+							</section>
+
+							<ul class="copyright">
+								<li>Copyright © 2020 Company Name </li>
+								<li>Template by: <a href=""></a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/main.js"></script>
+	</body>
+</html>
